@@ -1,4 +1,4 @@
-package com.fullprintcenter.clothing.utilities;
+package com.fullprintcenter.utilities;
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package com.fullprintcenter.clothing.utilities;
+package com.fullprintcenter.utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

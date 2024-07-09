@@ -1,11 +1,11 @@
-package com.fullprintcenter.clothing.tests;
+package com.fullprintcenter.tests;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.fullprintcenter.clothing.utilities.BrowserUtils;
-import com.fullprintcenter.clothing.utilities.ConfigurationReader;
-import com.fullprintcenter.clothing.utilities.Driver;
+import com.fullprintcenter.utilities.BrowserUtils;
+import com.fullprintcenter.utilities.ConfigurationReader;
+import com.fullprintcenter.utilities.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,7 +34,7 @@ public class TestBase {
         String path = projectPath + "/test-output/report.html";
         htmlReporter = new ExtentSparkReporter(path);
         report.attachReporter(htmlReporter);
-        htmlReporter.config().setReportName("B5 Amazon Test");
+        htmlReporter.config().setReportName("Full Print Center Clothing Test");
         report.setSystemInfo("Environment", "Stage");
         report.setSystemInfo("Browser", ConfigurationReader.get("browser"));
         report.setSystemInfo("OS", System.getProperty("os.name"));

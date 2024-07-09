@@ -1,4 +1,4 @@
-package com.fullprintcenter.clothing.utilities;
+package com.fullprintcenter.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
