@@ -417,4 +417,13 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
+    public static boolean isClickable(WebElement webElement) {
+        try {
+            WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(5));
+            wait.until(ExpectedConditions.elementToBeClickable(webElement));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }
