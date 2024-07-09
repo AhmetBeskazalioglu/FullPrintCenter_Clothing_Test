@@ -1,5 +1,6 @@
 package com.fullprintcenter.tests.categories.clothing;
 
+import com.fullprintcenter.pages.ClothingPage;
 import com.fullprintcenter.pages.LoginPage;
 import com.fullprintcenter.tests.TestBase;
 import com.fullprintcenter.utilities.ConfigurationReader;
@@ -12,9 +13,10 @@ public class Clothing_Test extends TestBase {
 
     private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     LoginPage loginPage = new LoginPage();
+    ClothingPage clothingPage = new ClothingPage();
 
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
 
 
 
@@ -22,13 +24,15 @@ public class Clothing_Test extends TestBase {
 
         extentLogger.info("go to "+ ConfigurationReader.get("url")+" web page");
         driver.get(ConfigurationReader.get("url"));
-        //extentLogger.info("log in with "+ConfigurationReader.get("email")+" credential");
-        //loginPage.clickLoginButton();
-        //loginPage.login(ConfigurationReader.get("email"), ConfigurationReader.get("password"));
-        //extentLogger.info("Verify that login is successful");
-        //loginPage.verifyLogin();
+        extentLogger.info("log in with "+ConfigurationReader.get("email")+" credential");
+        loginPage.clickLoginButton();
+        loginPage.login(ConfigurationReader.get("email"), ConfigurationReader.get("password"));
+        extentLogger.info("Verify that login is successful");
+        loginPage.verifyLogin();
         extentLogger.info("Navigate to 'Clothing' category");
         loginPage.navigateToVerticalMenu("Clothing");
+        clothingPage.goToClothingPages();
+
 
     }
 }
